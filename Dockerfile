@@ -17,6 +17,10 @@ FROM ghcr.io/renovatebot/renovate@sha256:33153a313777d4640e37dccdac5ec67263c00ed
 
 COPY --from=fetcher /out/* /usr/local/bin/
 
+USER root
+RUN apt-get update; apt-get install -y --no-install-recommends gcc g++ build-essential
+USER ubuntu
+
 # Remove once nix is removed from tools/bazel
 USER root
 RUN mkdir -m 0755 /nix && chown ubuntu /nix

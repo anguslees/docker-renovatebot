@@ -82,7 +82,7 @@ jobs:
 
       - name: Attest
         if: github.event_name != 'pull_request' && !startsWith(github.ref, 'refs/heads/renovate/')
-        uses: actions/attest-build-provenance@f9eaf234fc1c2e333c1eca18177db0f44fa6ba52 # v2
+        uses: actions/attest-build-provenance@bd77c077858b8d561b7a36cbe48ef4cc642ca39d # v2
         id: attest
         with:
           subject-name: ghcr.io/${{ github.repository }}

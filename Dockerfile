@@ -5,7 +5,7 @@ ARG TARGETARCH
 #ARG TARGETVARIANT
 
 # renovate: datasource=github-releases depName=bazelbuild/bazelisk
-ARG BAZELISK_VERSION=1.25.0
+ARG BAZELISK_VERSION=1.26.0
 
 RUN mkdir /out
 RUN curl -L -o /out/bazelisk https://github.com/bazelbuild/bazelisk/releases/download/v$BAZELISK_VERSION/bazelisk-$TARGETOS-$TARGETARCH

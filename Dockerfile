@@ -1,4 +1,4 @@
-FROM --platform=$BUILDPLATFORM cgr.dev/chainguard/bash@sha256:1b5f410a52c56697e11996f5b6d4ffa8401fcb5026046dc62fcdf23a4ff107e5 AS fetcher
+FROM --platform=$BUILDPLATFORM cgr.dev/chainguard/bash@sha256:031fe5127dd95749f65243883b3ee7be3609e761a15c9ef2bc0baa0e31f136ae AS fetcher
 
 ARG TARGETOS
 ARG TARGETARCH

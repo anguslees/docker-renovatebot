@@ -13,7 +13,7 @@ RUN curl -L -o /out/bazelisk https://github.com/bazelbuild/bazelisk/releases/dow
 RUN chmod a+x /out/*
 RUN ln -s bazelisk /out/bazel
 
-FROM ghcr.io/renovatebot/renovate@sha256:87a051477bd7a2f76f592ae8a06d37fefa645abdca12d959133010a86fe987d5
+FROM ghcr.io/renovatebot/renovate@sha256:85a57ec8b335d670c0a7070d5c3b2ee6276a1dc2458f13974f8447ceec8043a9
 
 COPY --from=fetcher /out/* /usr/local/bin/
 

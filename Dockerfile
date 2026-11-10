@@ -1,4 +1,4 @@
-FROM --platform=$BUILDPLATFORM cgr.dev/chainguard/bash@sha256:e29522da2730645ecac25c56f4fa65d1f9cac45c4a685af808c8e852cfdf3159 AS fetcher
+FROM --platform=$BUILDPLATFORM cgr.dev/chainguard/bash@sha256:8d9119f064c7ab9b39845f4943bb52c103a8e21777ea9251e7bf4a31e4413169 AS fetcher
 
 ARG TARGETOS
 ARG TARGETARCH
@@ -13,7 +13,7 @@ RUN curl -L -o /out/bazelisk https://github.com/bazelbuild/bazelisk/releases/dow
 RUN chmod a+x /out/*
 RUN ln -s bazelisk /out/bazel
 
-FROM ghcr.io/renovatebot/renovate@sha256:8a4c49ef19bb71bedf4eaa4d1087a31a1793bd53de41478753d2d648e53eed19
+FROM ghcr.io/renovatebot/renovate@sha256:eec896cbc3a745b5144c1547360e8197efcd0f949a688a8a63605ee4db8590d0
 
 COPY --from=fetcher /out/* /usr/local/bin/
 
